@@ -26,6 +26,5 @@ while True:
 
 # Release the webcam. in other words turn it of
 video.release()
-
 # Destroys all the windows which were created
 cv2.destroyAllWindows()
