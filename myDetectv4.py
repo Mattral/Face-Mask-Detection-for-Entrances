@@ -11,6 +11,8 @@ import os
 import time 
 #For arduino connection
 import serial
+from playsound import playsound  # Import the playsound library
+
 
 #For arduino connection
 arduino = serial.Serial('COM4', 9600)
@@ -87,6 +89,8 @@ try:
                     print("Alarm")
                 # For Arduino connection
                     arduino.write(b'L')
+                    playsound("alarm.mp3")  # Replace "alarm.mp3" with your alarm sound file
+
 
             # Update the previous mask status
                 previous_mask_status = current_mask_status
